@@ -1,0 +1,51 @@
+﻿<Window x:Class="Weathercast.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weathercast"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Name="locationTextBox" MinWidth="150"></TextBox>
+            <Button Content="Send" Margin="15 0 0 0" Background="White" Click="Button_Click"></Button>
+        </StackPanel>
+        <Label Name="locationLabel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="25px">Город</Label>
+        <Image Name="weatherIcon" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"></Image>
+        <Label Name="weatherLabel" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15px" FontStyle="Italic">Погода</Label>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Right" VerticalAlignment="Center">Температура :</Label>
+            <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Name="tempLabel"></Label>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Right" VerticalAlignment="Center">Ощущается как :</Label>
+            <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Name="feelsLikeLabel"></Label>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Right" VerticalAlignment="Center">Скорость ветра :</Label>
+            <Label Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Name="windSpeedLabel"></Label>
+        </Grid>
+    </Grid>
+</Window>
